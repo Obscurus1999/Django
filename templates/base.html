@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Emmanuel{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'apprama1:vista1_apprama1' %}">Vista 1 apprama1</a></li>
+            <li><a href="{% url 'apprama1:vista2_apprama1' %}">Vista 2 apprama1</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido específico de cada página -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; Django</p>
+    </footer>
+</body>
+</html>

@@ -1,8 +1,31 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}vista 1 - apprama2{% endblock %}
+{% block title %}Catálogo de Proyectos{% endblock %}
 
 {% block content %}
-<h1>vista 1 de apprama2</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, ullam deserunt quia voluptates, quisquam iusto corporis cupiditate ea, officia fugiat tempora! Consectetur nostrum reprehenderit eveniet distinctio voluptates. Iste, consequatur molestiae!.</p>
+<div class="page-header">
+    <h1>Catálogo de Recursos y Proyectos</h1>
+    <p>Resumen visual de las iniciativas activas en la plataforma.</p>
+</div>
+
+<div class="card-grid">
+    <div class="project-card">
+        <img src="{% static 'images/proyecto1.png' %}" alt="Rediseño Plataforma Web" class="card-img">
+        <div class="card-body">
+            <h3>Rediseño Plataforma Web</h3>
+            <p>Modernización de la arquitectura con Django y componentes reutilizables.</p>
+            <span class="tag">Desarrollo</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="{% static 'images/proyecto2.png' %}" alt="Migración de Base de Datos" class="card-img">
+        <div class="card-body">
+            <h3>Migración de Base de Datos</h3>
+            <p>Optimización e integración de modelos de datos para la organización.</p>
+            <span class="tag alt">Infraestructura</span>
+        </div>
+    </div>
+</div>
 {% endblock %}

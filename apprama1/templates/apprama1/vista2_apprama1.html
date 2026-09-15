@@ -1,8 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}vista 2 - apprama1{% endblock %}
+{% block title %}Directorio de Usuarios{% endblock %}
 
 {% block content %}
-<h1>vista 2 de apprama1</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, ullam deserunt quia voluptates, quisquam iusto corporis cupiditate ea, officia fugiat tempora! Consectetur nostrum reprehenderit eveniet distinctio voluptates. Iste, consequatur molestiae!.</p>
+<div class="page-header">
+    <h1>Directorio de Personal</h1>
+    <p>Listado detallado de miembros registrados en el sistema.</p>
+</div>
+
+<div class="table-container">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Rol / Cargo</th>
+                <th>Estado</th>
+                <th>Fecha Ingreso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#001</td>
+                <td>Ana Martínez</td>
+                <td>Administrador de Sistemas</td>
+                <td><span class="badge active">Activo</span></td>
+                <td>12/01/2025</td>
+            </tr>
+            <tr>
+                <td>#002</td>
+                <td>Carlos Mendoza</td>
+                <td>Desarrollador Backend</td>
+                <td><span class="badge active">Activo</span></td>
+                <td>05/03/2025</td>
+            </tr>
+            <tr>
+                <td>#003</td>
+                <td>Sofía Torres</td>
+                <td>Diseñadora UX/UI</td>
+                <td><span class="badge inactive">Inactivo</span></td>
+                <td>20/08/2025</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 {% endblock %}

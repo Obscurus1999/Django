@@ -1,29 +1,33 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>{% block title %}Emmanuel{% endblock %}</title>
-    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Plataforma de Gestión{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="{% url 'inicio:inicio' %}">inicio</a></li>
-            <li><a href="{% url 'apprama1:vista1_apprama1' %}">Vista 1 apprama1</a></li>
-            <li><a href="{% url 'apprama1:vista2_apprama1' %}">Vista 2 apprama1</a></li>
-            <li><a href="{% url 'apprama2:vista1_apprama2' %}">Vista 1 apprama2</a></li>
-            <li><a href="{% url 'apprama2:vista2_apprama2' %}">Vista 2 apprama2</a></li>
-        </ul>
-    </nav>
+    <header class="navbar">
+        <div class="brand">🚀 Sistema Enterprise</div>
+        <nav class="nav-links">
+            <span class="nav-section">Módulo Usuarios:</span>
+            <a href="{% url 'apprama1:vista1_apprama1' %}">Métricas</a>
+            <a href="{% url 'apprama1:vista2_apprama1' %}">Directorio</a>
+            
+            <span class="nav-section">Módulo Proyectos:</span>
+            <a href="{% url 'apprama2:vista1_apprama2' %}">Catálogo</a>
+            <a href="{% url 'apprama2:vista2_apprama2' %}">Nuevo Registro</a>
+        </nav>
+    </header>
 
-    <!-- Contenido específico de cada página -->
-    {% block content %}
-    {% endblock %}
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; Django</p>
+    <footer class="footer">
+        <p>&copy; 2026 Sistema Integrado Django — Evaluación GitHub</p>
     </footer>
 </body>
 </html>

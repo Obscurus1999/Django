@@ -1,18 +1,80 @@
-body {
-    font-family: Arial, sans-serif;
+/* Estilos Globales y Layout */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+body { background-color: #f1f5f9; color: #334155; display: flex; flex-direction: column; min-height: 100vh; }
+
+.navbar { background: #0f172a; color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: bold; font-size: 1.2rem; }
+.nav-links a { color: #94a3b8; text-decoration: none; margin: 0 0.4rem; padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.9rem; }
+.nav-links a:hover { background: #1e293b; color: white; }
+.nav-section { color: #64748b; font-size: 0.8rem; margin-left: 1rem; }
+
+.main-content { max-width: 1100px; margin: 2rem auto; width: 90%; flex: 1; }
+.page-header { margin-bottom: 1.5rem; }
+
+/* Banner / Hero Card (Para la Vista 1) */
+.hero-card {
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    height: 180px; /* Fija una altura compacta para el banner */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.hero-text {
+    padding: 1.5rem 2rem;
+    flex: 1;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+.hero-img {
+    width: 280px;  /* Ancho controlado */
+    height: 100%;  /* Se adapta a la altura fija del hero-card */
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
-footer {
-    margin-top: 20px;
-    text-align: center;
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se estire */
+    display: block;
 }
+
+/* Tablas Profesionales */
+.table-container { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.data-table { width: 100%; border-collapse: collapse; text-align: left; }
+.data-table th, .data-table td { padding: 1rem; border-bottom: 1px solid #e2e8f0; }
+.data-table th { background: #f8fafc; font-weight: 600; }
+.badge { padding: 0.25rem 0.6rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold; }
+.badge.active { background: #dcfce7; color: #166534; }
+.badge.inactive { background: #fee2e2; color: #991b1b; }
+
+/* Grid de Tarjetas / Catálogo de Proyectos */
+.card-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px)); /* Ancho controlado de las columnas */
+    gap: 1.5rem; 
+}
+.project-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.card-img { 
+    width: 100%; 
+    height: 140px; /* Se reduce la altura de las imágenes de los proyectos */
+    object-fit: cover; 
+    display: block;
+}
+.card-body { padding: 1.2rem; }
+.tag { display: inline-block; margin-top: 0.8rem; padding: 0.2rem 0.5rem; background: #e0f2fe; color: #0369a1; border-radius: 4px; font-size: 0.8rem; }
+.tag.alt { background: #f3e8ff; color: #6b21a8; }
+
+/* Formularios Estilizados */
+.form-container { background: white; padding: 2rem; border-radius: 8px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 1.2rem; display: flex; flex-direction: column; }
+.form-group label { margin-bottom: 0.4rem; font-weight: 600; font-size: 0.9rem; }
+.form-group input, .form-group select, .form-group textarea { padding: 0.6rem; border: 1px solid #cbd5e1; border-radius: 6px; }
+.btn-primary { background: #2563eb; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; }
+.btn-primary:hover { background: #1d4ed8; }
+
+.footer { background: #e2e8f0; text-align: center; padding: 1rem; font-size: 0.85rem; color: #64748b; }
